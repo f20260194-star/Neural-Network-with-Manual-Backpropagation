@@ -1,0 +1,54 @@
+Important Note
+
+Incomplete submissions are expected and completely fine.
+All four topics below might be new to you. They will probably feel difficult when you
+first read them, and that is normal. Please do not let that stop you from picking one.
+Start simple. Figure out what the topic actually is before you write any code. Read the
+paper. Read other people’s implementations, because all of this is published work and the
+reference code is public. Use whatever helps you learn, including AI assistants.
+We scoped these tasks so that finishing everything in two weeks is hard. We are not
+checking whether you finished. We are looking for signs that you understood what you
+were building. Even if you manage to complete just 2 out of 6 points, that will be more
+than enough for us.
+Whatever you manage to build, you will come out of this knowing a lot more than when
+you started.
+
+
+
+
+
+Common Requirements
+Every submission must include:
+1. A working repository: Code that runs, with a README.md explaining how to run it.
+2. A correctness harness: An actual test script that compares your implementation against
+a trusted reference and clearly reports pass or fail.
+3. A write-up: Submit a 2–4 page WRITEUP.md.
+4. A commit history: We want to see how the work developed. Make regular and meaningful
+commits rather than submitting the entire project in one commit.
+
+
+
+
+
+
+Task 1: Neural Network with Manual Backpropagation
+Build a small artificial neural network and implement backpropagation yourself. You may use
+NumPy, but you may not use autograd or .backward() for your implementation.
+Deliverables
+Item Required deliverable
+1.1 Build a small feedforward neural network using basic matrix operations.
+1.2 Implement the forward pass using linear layers and an activation function of your choice.
+1.3 Implement the backward pass manually using the chain rule. Derive the gradients for every
+layer and include the mathematics in your write-up or code comments.
+1.4 Check your gradients against torch.autograd or numerical gradient checking. Your results
+should match within a reasonable tolerance.
+
+1.5 Train the network on a small real task, such as a reduced MNIST dataset or a simple classifi-
+cation or regression dataset. Show that the loss decreases during training.
+
+1.6 In your write-up, discuss any gradient mistakes you made and explain how you identified and
+fixed them.
+
+
+Stretch goal. Add another activation–loss combination and derive its gradients. You may also
+implement an optimizer such as Momentum or Adam.
