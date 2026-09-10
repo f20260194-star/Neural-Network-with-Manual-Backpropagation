@@ -52,3 +52,14 @@ fixed them.
 
 Stretch goal. Add another activation–loss combination and derive its gradients. You may also
 implement an optimizer such as Momentum or Adam.
+
+
+git init         # start tracking a new project
+git status       # what has changed (use this constantly)
+git add file.py  # stage a specific file
+git add .        # stage everything (check git status first)
+git commit -m "message" # save a snapshot with a message
+git log --oneline # see your history
+git push         # send commits to GitHub
+git pull         # get changes from GitHub
+git diff         # see exactly what you changed
