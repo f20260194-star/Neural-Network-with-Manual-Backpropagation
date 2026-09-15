@@ -34,3 +34,23 @@ class Network:
         a1 = self.ReLU.forward(z1)
         z2 = self.layer2.forward(a1)
         return z2
+
+1.3
+
+def softmax(Z):
+    exp_Z = numpy.exp(Z)
+    return exp_Z / numpy.sum(exp_Z, axis=1, keepdims=True)
+
+def cross_entropy_loss(P, y):
+    N = P.shape[0]
+    correct_class_probs = P[numpy.arange(N), y]
+    log_probs = numpy.log(correct_class_probs + 1e-12)
+    loss = -numpy.mean(log_probs)
+    return loss
+
+def cross_entropy_backward(P, y):
+    N = P.shape[0]
+    dZ = P.copy()
+    dZ[numpy.arange(N), y] -= 1
+    dZ /= N
+    return dZ
